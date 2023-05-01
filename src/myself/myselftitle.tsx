@@ -5,10 +5,9 @@ import { createRoot } from 'react-dom/client';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import MySelf from "./myself/myself"
 
-const App = () => {
-    return <><MySelf/></>
+const MyselfTitle = () => {
+    return <h2>しおのあそびば</h2>
 }
 
-export default App
+export default MyselfTitle
