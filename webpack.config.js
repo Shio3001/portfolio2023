@@ -10,7 +10,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
     
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -43,6 +43,25 @@ const config = {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
       },
+      {
+        test: /\.scss$/i,
+        use: [
+            {
+                loader: 'style-loader',
+            },
+            {
+                loader: 'css-loader',
+            },
+            {
+                loader: 'sass-loader',
+                options: {
+                    sassOptions: {
+                        outputStyle: 'expanded',
+                    },
+                },
+            },
+        ]
+      }
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
