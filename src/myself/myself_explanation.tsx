@@ -4,10 +4,11 @@ const { useContext, useReducer, createContext } = React;
 import { createRoot } from 'react-dom/client';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
-const MyselfTitle = () => {
-    return <div className='myself-title'><h2>しおのあそびば</h2></div>
+const MyselfExplanation = (props:{title:string , details:string}) => {
+    return (<div>
+        <h4>{props.title}</h4>
+        <h5>{props.details}</h5>
+      </div>)
 }
 
-export default MyselfTitle
+export default MyselfExplanation
