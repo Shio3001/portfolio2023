@@ -1,13 +1,17 @@
 
+
 import * as React from 'react';
 const { useContext, useReducer, createContext } = React;
 import { createRoot } from 'react-dom/client';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
-const MyselfTitle = () => {
-    return <div className='myself-title'><h2>しおのあそびば</h2></div>
+const Background = () => {
+    return <div className='myself-background-div-out'>
+        <div className='myself-background-div-in'>
+        
+        </div>
+    </div>
 }
 
-export default MyselfTitle
+export default Background

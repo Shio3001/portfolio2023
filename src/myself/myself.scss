@@ -1,7 +1,15 @@
-.myselfdiv{
-    h2{
-        font-size: 100px;
-        background-color: aliceblue;
-        color: black;
+.myself-div{
+    .myself-background-div{
+        position: relative;
     }
+    .myself-move-div{
+        position: relative;
+        h2{
+            font-size: 100px;
+            // background-color: aliceblue;
+            color: #ffffff;
+        }
+    }
+
+
 }

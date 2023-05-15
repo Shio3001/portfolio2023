@@ -1,5 +1,16 @@
-.h1 {
+@charset "UTF-8";
+.myselfdiv h2 {
   font-size: 100px;
+  background-color: aliceblue;
+  color: black;
+}
+
+.myself-background-div {
+  background-image: url(/src/myself/background/img/yoshima.png); /* 画像のURLを指定       */
+  background-repeat: no-repeat; /* 画像の繰り返しを指定  */
+  width: 100vw; /* 横幅のサイズを指定    */
+  height: 400vh; /* 縦幅のサイズを指定 */
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
