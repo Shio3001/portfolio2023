@@ -1,16 +1,88 @@
 @charset "UTF-8";
-.myselfdiv h2 {
-  font-size: 100px;
-  background-color: aliceblue;
-  color: black;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&display=swap");
+.myself-background-div-out {
+  position: fixed;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
 }
 
-.myself-background-div {
+.myself-background-div-in {
   background-image: url(/src/myself/background/img/yoshima.png); /* 画像のURLを指定       */
   background-repeat: no-repeat; /* 画像の繰り返しを指定  */
   width: 100vw; /* 横幅のサイズを指定    */
-  height: 400vh; /* 縦幅のサイズを指定 */
+  height: 100vh; /* 縦幅のサイズを指定 */
   background-size: cover;
+  filter: brightness(60%);
+}
+
+.myself-div .myself-background-div {
+  position: relative;
+}
+.myself-div .myself-first-div {
+  position: relative;
+  height: 100vh;
+}
+.myself-div .myself-first-div h1 {
+  font-size: 50px;
+  color: #ffffff;
+}
+.myself-div .myself-first-div .myself-logo-div {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.myself-div .myself-first-div .myself-logo-div .myself-logo-out .myself-logo-in {
+  width: 50vw;
+  height: 40vh;
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.myself-div .myself-first-div .myself-logo-div .myself-logo-out .myself-logo-in .myself-logo-shape {
+  border-radius: 50%;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+}
+.myself-div .myself-move-div {
+  position: relative;
+}
+.myself-div .myself-move-div h3 {
+  font-size: 45px;
+  margin: 0px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+}
+.myself-div .myself-move-div h4 {
+  font-size: 30px;
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+.myself-div .myself-move-div h5 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.myself-div .myself-move-div .award-div, .myself-div .myself-move-div .activity-div {
+  background-color: #ffffff;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 20px;
+}
+.myself-div .myself-move-div .award-div p, .myself-div .myself-move-div .activity-div p {
+  font-size: 20px;
+}
+
+.common-snslink .sns-icon {
+  border-radius: 50%;
+  background-color: aqua;
+}
+.common-snslink .sns-text {
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */
