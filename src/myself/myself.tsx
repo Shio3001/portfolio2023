@@ -45,12 +45,11 @@ const Myself = () => {
   }, []);
 
   return (
-    <div className="myself-div">
+    <div className={"myself-div"}>
       <div className={"myself-background-div"} ref={backgroundDivElement}>
         <div className={"myself-background-div-out" + (situation ? " -collapse" : " -expand")}>
           <Background />
         </div>
-        <MySelfie situation={situation} />
       </div>
       <div className="myself-first-div">
         <MyselfTitle />
