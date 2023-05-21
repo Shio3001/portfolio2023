@@ -1,41 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;700&display=swap");
 
 .myself-div {
   .myself-background-div {
-    position: fixed;
-    background-attachment: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* 横幅のサイズを指定    */
-    height: 100vh; /* 縦幅のサイズを指定 */
-    &.-visible::after {
-      transform: translate(0, 0);
-    }
-    &::after {
-      display: block;
-      content: "";
-      width: 100vw;
-      height: 100vh;
+    position: static;
+    .myself-background-div-out {
+      position: fixed;
+      background-attachment: fixed;
       top: 0;
       left: 0;
+      width: 100vw; /* 横幅のサイズを指定    */
+      height: 100vh; /* 縦幅のサイズを指定 */
 
-      opacity: 1;
-      position: absolute;
+      &.-collapse::after {
+        transform: translate(0, 0%);
+      }
 
-      background-color: #ffffff;
-      transform: translate(0, 100%);
-      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-      content: "";
-    }
+      &::after {
+        position: absolute;
+        top: 0;
+        content: "";
+        width: 100vw;
+        height: 100vh;
 
-    .myself-background-div-img {
-      background-image: url(/src/myself/background/img/yoshima.png); /* 画像のURLを指定       */
-      background-repeat: no-repeat; /* 画像の繰り返しを指定  */
-      background-size: cover;
+        display: block;
+        transform: translate(0, 100%);
+        transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
 
-      width: 100%;
-      height: 100%;
-      filter: brightness(60%);
+        background-color: #ffffff;
+      }
+
+      .myself-background-div-img {
+        background-image: url(/src/myself/background/img/yoshima.png); /* 画像のURLを指定       */
+        background-repeat: no-repeat; /* 画像の繰り返しを指定  */
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        filter: brightness(60%);
+
+        //   contnt: "";
+      }
     }
   }
 
@@ -77,10 +81,10 @@
   .myself-lifetime-div {
     position: relative;
     h3 {
-      font-size: 45px;
+      font-size: 60px;
       margin: 0px;
       font-family: "Noto Sans JP", sans-serif;
-      font-weight: 500;
+      font-weight: 700;
     }
     h4 {
       font-size: 30px;

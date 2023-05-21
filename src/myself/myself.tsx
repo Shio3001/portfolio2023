@@ -14,21 +14,21 @@ import Background from "./background/myself_background";
 const Myself = () => {
   const backgroundDivElement = useRef<HTMLDivElement>(null);
 
-  const expandLifetimeArea = (showLifetime: boolean, action: { referencePoint: number; scrollY: number }) => {
+  const expandLifetimeArea = (situation: boolean, action: { referencePoint: number; scrollY: number }) => {
     console.log(action);
 
-    if (!showLifetime && action.referencePoint < action.scrollY) {
+    if (!situation && action.referencePoint < action.scrollY) {
       console.log("下へ");
       return true;
     }
-    if (showLifetime && action.scrollY < action.referencePoint) {
+    if (situation && action.scrollY < action.referencePoint) {
       console.log("上へ");
       return false;
     }
-    return showLifetime;
+    return situation;
   };
 
-  const [showLifetime, dispatchLifetimeArea] = useReducer(expandLifetimeArea, false);
+  const [situation, dispatchLifetimeArea] = useReducer(expandLifetimeArea, false);
   const scroll = (event: Event) => {
     // const referencePoint = backgroundDivElement.current.clientHeight;
     const referencePoint = 20;
@@ -46,8 +46,10 @@ const Myself = () => {
 
   return (
     <div className="myself-div">
-      <div className={"myself-background-div" + (showLifetime ? " -visible" : "")} ref={backgroundDivElement}>
-        <Background />
+      <div className={"myself-background-div"} ref={backgroundDivElement}>
+        <div className={"myself-background-div-out" + (situation ? " -collapse" : " -expand")}>
+          <Background />
+        </div>
       </div>
       <div className="myself-first-div">
         <MyselfTitle />
