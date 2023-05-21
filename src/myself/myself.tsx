@@ -10,7 +10,7 @@ import Award from "./award/award";
 import Activity from "./activity/activity";
 import Belong from "./belong/belong";
 import Background from "./background/myself_background";
-
+import MySelfie from "./selfie/selfie";
 const Myself = () => {
   const backgroundDivElement = useRef<HTMLDivElement>(null);
 
@@ -50,15 +50,22 @@ const Myself = () => {
         <div className={"myself-background-div-out" + (situation ? " -collapse" : " -expand")}>
           <Background />
         </div>
+        <MySelfie situation={situation} />
       </div>
       <div className="myself-first-div">
         <MyselfTitle />
         <MyselfLogo />
       </div>
       <div className="myself-lifetime-div">
-        <Belong />
-        <Award />
-        <Activity />
+        <div className="myself-lifetime-div-flex">
+          <div className="myself-lifetime-div-left">
+            <Belong />
+            <Activity />
+          </div>
+          <div className="myself-lifetime-div-right">
+            <Award />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,30 @@
 .myself-div {
   .myself-background-div {
     position: static;
+
+    .myself-selfie-div {
+      position: fixed;
+      bottom: 0;
+
+      .myself-selfie-out {
+        // position: static;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        .myself-selfie-in {
+          width: 400px;
+          height: 100%;
+          background-color: cadetblue;
+          transform: translateY(0%);
+          transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1s;
+        }
+        .-expand {
+          transform: translateY(100%);
+        }
+      }
+    }
+
     .myself-background-div-out {
       position: fixed;
       background-attachment: fixed;
@@ -80,6 +104,16 @@
   }
   .myself-lifetime-div {
     position: relative;
+    .myself-lifetime-div-flex {
+      display: flex;
+      justify-content: center;
+      .myself-lifetime-div-left {
+      }
+
+      .myself-lifetime-div-right {
+      }
+    }
+
     h3 {
       font-size: 60px;
       margin: 0px;
@@ -101,7 +135,7 @@
 
     .award-div,
     .activity-div {
-      background-color: #ffffff;
+      // background-color: #ffffff;
       margin: 10px 10px 10px 10px;
       padding: 10px 10px 10px 20px;
       p {
